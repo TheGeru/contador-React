@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "@mui/joy/Button";
 
 export function Contador(){
     const [cont, setCont] = useState(0);
@@ -16,9 +17,25 @@ export function Contador(){
         return(
             <> 
                 <div>El contador es: {cont}</div>
-                <button onClick={avanzar}>Incrementar</button>
-                <button onClick={decrementar}>Decrementar</button>
-                <button onClick={reiniciar}>Reiniciar</button>
+                <Button
+                variant="solid"
+                color="primary"
+                onClick={avanzar}>
+                    Avanzar
+                </Button>
+                <Button
+                variant = "solid"
+                color = "primary"
+                onClick={decrementar}>
+                    Decrementar
+                </Button>
+                
+                <Button
+                variant = "solid"
+                color = "primary"
+                onClick={reiniciar}>
+                    Reiniciar
+                </Button>
             </>
         );
 }
